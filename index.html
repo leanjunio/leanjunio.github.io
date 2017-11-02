@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lean Junio</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'/>
   <link rel="stylesheet" href="icons/devicon.min.css">  
   <link rel="stylesheet" href="style.css">
@@ -13,6 +14,24 @@
 
   <!-- Introduction Section -->
   <section id="introduction">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a href="#" class="navbar-brand">Lean <strong>Junio</strong></a>
+      <button class="border-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse float-right" id="navbarItems">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </div> 
+    </nav>
+
     <div class="container">
       <div class="row fill-viewport align-items-center">
 
@@ -21,13 +40,13 @@
 
           <!-- image -->
           <div class="d-flex justify-content-center">
-            <img src="http://bit.ly/2gG6w1m" alt="image" class="w-50 h-50 rounded-circle">
+            <img src="http://bit.ly/2gG6w1m" alt="image" class="w-50 h-50 rounded-circle profile">
           </div>
 
           <!-- some description -->
-          <div class="pt-5 text-center text-md-left">
+          <div class="pt-5 text-center">
             <h1>Lean Junio</h1>
-            <p>A passionate developer learning all things development!</p>
+            <p>Full-Stack Developer?</p>
           </div>
         </div>
 
@@ -55,7 +74,7 @@
       <span>2</span>
       <span>3</span>     var Person = {
       <span>4</span>       name      : "Lean",
-      <span>5</span>       passions  : ["Creating", "Programming", "learning"],
+      <span>5</span>       passions  : ["Creating", "Programming", "Learning"],
       <span>6</span>       greeting  : function() {
       <span>7</span>         return "Greetings! Thanks for visiting my site!";
       <span>8</span>       }
@@ -74,7 +93,7 @@
     <span>5</span>       passions  : [
     <span>5</span>         "Creating",
     <span>5</span>         "Programming",
-    <span>5</span>         "learning"],
+    <span>5</span>         "Learning"],
     <span>5</span>       ],
     <span>6</span>       greeting  : function() {
     <span>7</span>         return "Hello World!";
@@ -94,7 +113,7 @@
       </div>
 
       <!-- font icons for different technologies -->
-      <div class="row py-5 text-center text-white order-2 mx-0">
+      <div class="row pt-5 pb-2 text-center text-white order-2 mx-0">
         <div class="col-6 my-4 my-md-0 col-md-2">
           <i class="devicon-angularjs-plain"></i>
           <p class="mt-3">AngularJS</p>
@@ -191,5 +210,7 @@
       </div>
     </div>
   </section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
 </body>
 </html>
