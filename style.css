@@ -35,6 +35,10 @@ i {
   min-height: 40vh;
 }
 
+.fill-viewport-30 {
+  min-height: 27vh;
+}
+
 .size-15 {
   font-size: 15pt;
 }
