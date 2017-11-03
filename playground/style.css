@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 50vh;
+  width: 33.3vw;
+}
+
+.col {
+  padding: 0;
+}
+
+.col {
+  height: 50vh;
+  width: 33.3vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.child::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.col:hover .child:before, .col:focus .child:before {
+  display: block;
+}
+
+span {
+  color: white;
+  font-family: sans-serif;
+  padding: 25%;
+  position: absolute;
+}
+
+.col:hover span, .col:focus span {
+  display: block;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  transition: all .5s;
+}
+
+.col:hover .child, .col:focus .child {
+  transform: scale(1.2);
+}
+
+/* images */
+.guess {
+  background-image: url('projPictures/Guessit.png');
+}
+.api {
+  background-image: url('projPictures/Requester.png');
+}
+.todo {
+  background-image: url('projPictures/Todo.png');
+}
+.blogger {
+  background-image: url('projPictures/Blog.png');
+}
+.quotter {
+  background-image: url('projPictures/Quoter.png');
+}
+.crypto {
+  background-image: url('projPictures/Crypto.png');
+}
