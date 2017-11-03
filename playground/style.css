@@ -59,6 +59,10 @@ span {
   transform: scale(1.2);
 }
 
+#portfolio {
+  padding: 0;
+}
+
 /* images */
 .guess {
   background-image: url('projPictures/Guessit.png');
