@@ -1,20 +1,36 @@
-/* #jaxx > img {
-  height: 220px;
-  width: 315px;
-} */
+/* Elements */
 
 i {
   color: white;
   font-size: 4rem;
 }
 
-.center {
-  margin: 0 auto;
+img {
+  transition: box-shadow 0.80s ease;
 }
 
-.navigation {
-  background: transparent;
+img:hover {
+  box-shadow: inset 0px 0 5px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul.social > li {
+  padding: 7px;
+  display: inline;
+}
+
+li > a {
+  color: white;
+}
+
+/* IDs */
 
 #introduction {
   background: linear-gradient(rgb(224, 241, 255), rgba(209, 209, 209, 0.8)), url('http://anguerde.com/pics/main/38/342732-minimal.jpg') 0% 0%/cover;
@@ -22,6 +38,15 @@ i {
 
 #footer {
   border-top: 0.1px white solid;
+}
+/* Classes */
+
+.center {
+  margin: 0 auto;
+}
+
+.navigation {
+  background: transparent;
 }
 
 .fill-viewport {
@@ -58,30 +83,4 @@ i {
 
 .profile {
   box-shadow: 0px 5px 13px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-img {
-  transition: box-shadow 0.80s ease;
-}
-
-img:hover {
-  box-shadow: inset 0px 0 5px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-
-ul.social > li {
-  padding: 7px;
-  display: inline;
-}
-
-li > a {
-  color: white;
 }
