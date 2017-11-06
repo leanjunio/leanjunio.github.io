@@ -1,5 +1,8 @@
-/* Elements */
+body {
+  font-family: 'Lato', sans-serif;
+}
 
+/* Elements */
 i {
   color: white;
   font-size: 4rem;
