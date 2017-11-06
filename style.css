@@ -1,3 +1,8 @@
+/* #jaxx > img {
+  height: 220px;
+  width: 315px;
+} */
+
 i {
   color: white;
   font-size: 4rem;
@@ -56,8 +61,6 @@ i {
 }
 
 img {
-  width: 400px;
-  height: 275px;
   transition: box-shadow 0.80s ease;
 }
 
