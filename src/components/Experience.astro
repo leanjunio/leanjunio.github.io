@@ -1,0 +1,87 @@
+---
+import type { Work } from "../pages/work.astro";
+
+export interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+---
+
+<div class="work__row">
+  <div class="work__information">
+    <p class="work__position">
+      {work.positions} · <a
+        class="work__url"
+        href={work.company_url}
+        class="work__company">{work.company}</a>
+    </p>
+    <p class="work__date">{work.start_date} - {work.end_date}</p>
+    <ul class="work__list">
+      {
+        work.position_info.map((info) => (
+          <li class="work__description">{info}</li>
+        ))
+      }
+    </ul>
+    <ul class="work__tools">
+      {work.skills.map((skill) => <li class="work__tool">{skill}</li>)}
+    </ul>
+  </div>
+</div>
+<style>
+  .work__row {
+    display: flex;
+    flex-direction: row;
+    min-height: 10rem;
+    align-content: center;
+    width: 100%;
+    gap: 2em;
+  }
+
+  .work__position {
+    line-height: 2em;
+    font-size: 0.9em;
+  }
+
+  .work__date {
+    font-size: 0.8em;
+    color: #666666;
+  }
+
+  .work__list {
+    margin: 1em 0;
+  }
+
+  .work__url {
+    color: #3f3f3f;
+    text-decoration: underline;
+  }
+
+  .work__description {
+    margin: 1em 0;
+    font-size: 0.85em;
+    line-height: 1.3em;
+    list-style-type: " · ";
+    list-style-position: inside;
+  }
+
+  .work__tool:first-of-type {
+    list-style-type: none;
+    list-style-position: inside;
+  }
+
+  .work__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-size: 0.78em;
+    color: #3f3f3f;
+    list-style-type: " · ";
+    list-style-position: inside;
+  }
+
+  .work__company {
+    text-decoration: underline;
+  }
+</style>

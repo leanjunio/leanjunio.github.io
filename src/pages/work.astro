@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Experience from "../components/Experience.astro";
+
+export type Work = {
+  positions: string;
+  company: string;
+  company_url: string;
+  position_info: string[];
+  skills: string[];
+  start_date: string;
+  end_date: string;
+};
+
+const work: Work[] = [
+  {
+    positions: "Frontend Engineer",
+    company: "Torc",
+    company_url: "https://www.torc.dev",
+    position_info: [
+      `Boosted user scheduling productivity by 80% with the release of a Calendly-like feature that utilizes Nylas API, Next.js, and Node.js, allowing for streamlined scheduling automation within the platform.`,
+      `Worked within the core feature development team which built and shipped features vital to the organization's quarterly goals.`,
+      `Revamped the multi-step signup flow improving user experience with collaboration with the design team and stakeholders.`,
+    ],
+    skills: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "GraphQL",
+      "Nylas API",
+      "Microservices",
+      "Vercel",
+    ],
+    start_date: "Jan 2023",
+    end_date: "Apr 2023",
+  },
+  {
+    positions: "Full Stack Engineer",
+    company_url: "https://wwww.communo.com",
+    company: "Communo",
+    position_info: [
+      `Worked on the core feature development team with focus on revamping the core communications modules.`,
+      `Advocated for and prioritized the utilization of TypeScript by refactoring outdated practices reducing the amount of bugs that made it to production by up to 20%.`,
+      `Optimized data loading time by 30% as well as the user experience by reducing network requests by 40% through the implementation of the React Query library.`,
+      `Improved backend developer productivity by up to 70% by implementing Nodemon API for hot-reloading.`,
+    ],
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "React Hooks",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Express",
+      "Tailwind CSS",
+      "Nylas API",
+      "Docker",
+      "Zustand",
+      "React Query",
+      "Google Cloud Platform",
+    ],
+    start_date: "Jun 2022",
+    end_date: "Dec 2022",
+  },
+  {
+    positions: "Lead Engineer, Full Stack Engineer",
+    company_url: "https://wwww.labnetik.ca",
+    company: "Labnetik",
+    position_info: [
+      `Delivered a cloud-based solution from ideation to development for a key client using AWS, React, Node.js, and MongoDB technologies, generating $65k in revenue. Reduced manual report generation time by 95%, streamlining the client's invoicing process.`,
+      `Promoted full utilization of React Testing Library, leading to up to 20% more bugs caught pre-release. Reduced potential for costly errors and enhanced product quality with black-box testing adoption.`,
+      `Championed the efforts for producing WAI-ARIA-compliant code to create accessible front-end features and experiences for people with disabilities.`,
+      `Developed a scalable internationalization framework using React-i18next to facilitate translations for French and future languages`,
+    ],
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "React Hooks",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Nest.js",
+      "Tailwind CSS",
+      "Material UI",
+      "Docker",
+      "Redux",
+      "React Query",
+      "Amazon Web Services",
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Payment Integrations",
+      "Sprint Planning",
+      "Software Architecture",
+    ],
+    start_date: "Oct 2020",
+    end_date: "Jun 2022",
+  },
+  {
+    positions: "Senior Full Stack Engineer",
+    company_url: "https://wwww.vera.zone",
+    company: "Vera Zone",
+    position_info: [
+      `Worked on the core development team with focus on meeting the MVP requirements, helped and mentored junior developers with tasks and fixed bugs.`,
+      `Reduced password theft risk by 100% through the implementation of a magic link authentication system resulting in a more secure and user-friendly authentication experience using SendGrid and token authentication.`,
+      `Established CI/CD pipeline to automate testing and deployment resulting in increased visibility and faster changes to reach QA.`,
+      `Developed scalable backend services for REST-compliant API requests and optimal multi-tier architecture utilization`,
+    ],
+    skills: [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Netlify",
+      "DigitalOcean",
+      "GitHub Actions",
+    ],
+    start_date: "May 2020",
+    end_date: "Oct 2022",
+  },
+];
+---
+
+<Layout title="Work">
+  <Navigation />
+  <main>
+    {work.map((w) => <Experience work={w} />)}
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-width: 100%;
+    margin: 3em 0;
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+</style>
