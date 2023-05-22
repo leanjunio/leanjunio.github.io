@@ -14,7 +14,8 @@ const { work } = Astro.props;
       {work.positions} · <a
         class="work__url"
         href={work.company_url}
-        class="work__company">{work.company}</a>
+        class="work__company">{work.company}</a
+      >
     </p>
     <p class="work__date">{work.start_date} - {work.end_date}</p>
     <ul class="work__list">
@@ -35,7 +36,7 @@ const { work } = Astro.props;
     flex-direction: row;
     min-height: 10rem;
     align-content: center;
-    width: 100%;
+    width: 90%;
     gap: 2em;
   }
 
