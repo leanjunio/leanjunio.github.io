@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const posts = await Astro.glob("./posts/*.md");
 
@@ -32,14 +33,11 @@ const sorted = posts.sort(
       ))
     }
   </main>
+  <Footer />
 </Layout>
 
 <style>
   main {
-    min-width: 100%;
-    max-width: 60ch;
-    display: flex;
-    flex-direction: column;
     gap: 0.5em;
   }
 
