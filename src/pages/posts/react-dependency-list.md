@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Don't add reference types in your dependency lists"
 pubDate: 2022-11-13
-description: "This is the first post of my new Astro blog."
+description: "Why you shouldn't add functions and objects in your dependency lists (most of the time)"
 author: "Lean Junio"
 tags: ['React', 'Dependency List', 'Renders', 'Primitive', 'Reference']
 ---
