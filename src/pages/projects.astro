@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Projects">
+  <Navigation />
+  <main>
+    <p>In the works...</p>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    min-width: 100%;
+    max-width: 60ch;
+  }
+
+  main > p {
+    margin-bottom: 2em;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.2rem;
+  }
+</style>
