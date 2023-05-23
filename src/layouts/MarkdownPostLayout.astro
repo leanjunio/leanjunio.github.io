@@ -1,18 +1,35 @@
 ---
 import Layout from "./Layout.astro";
+import Navigation from "../components/Navigation.astro";
+
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <Navigation />
+  <div class="post">
+    <h1>{frontmatter.title}</h1>
+    <span>{frontmatter.description}</span>
+    <p class="post__date">Published: {frontmatter.pubDate.slice(0, 10)}</p>
+  </div>
   <slot />
 </Layout>
 
 <style>
   h1 {
-    font-size: 3rem;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+  }
+
+  span,
+  .post__date {
+    font-size: 0.9em;
+    color: #555555;
+    font-weight: 500;
+  }
+
+  .post {
+    margin-bottom: 2rem;
   }
 </style>
