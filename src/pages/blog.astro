@@ -3,14 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 
 const posts = await Astro.glob("./posts/*.md");
+
+const sorted = posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).getTime() -
+    new Date(a.frontmatter.pubDate).getTime()
+);
 ---
 
 <Layout title="Blog">
   <Navigation />
   <main>
     {
-      posts.map((post) => (
-        <div>
+      sorted.map((post) => (
+        <div class="blog">
           <a class="blog__link" href={post.url}>
             {post.frontmatter.title}
           </a>
