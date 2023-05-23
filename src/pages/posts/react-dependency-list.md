@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Don't add reference types in your dependency lists'
+title: "Don't add reference types in your dependency lists"
 pubDate: 2022-11-13
 description: "This is the first post of my new Astro blog."
 author: "Lean Junio"
