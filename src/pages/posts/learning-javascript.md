@@ -48,7 +48,7 @@ In the case of the object (any reference type really), only the address or locat
 
 #### 3. Understand how [closures](https://medium.com/@samkwon521/eli5-closures-c0018a23e3c5) work
 
-> Closure is when a function is able to remember and access its lexical scope even when the function is executing outside its lexical scope.
+> A closure is when a function that is able to remember and access its lexical scope <mark>even when the function is executing outside its lexical scope.</mark>
 
 ```javascript
 function outerFunction() {
