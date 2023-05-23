@@ -11,13 +11,15 @@ const posts = await Astro.glob("./posts/*.md");
   <main>
     {posts.map((post) => <a href={post.url}>{post.frontmatter.title}</a>)}
   </main>
-  <Footer />
 </Layout>
 
 <style>
   main {
     min-width: 100%;
     max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
   }
 
   main > p {
