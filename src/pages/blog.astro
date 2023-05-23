@@ -17,9 +17,11 @@ const sorted = posts.sort(
     {
       sorted.map((post) => (
         <div class="blog">
-          <a class="blog__link" href={post.url}>
-            {post.frontmatter.title}
-          </a>
+          <mark>
+            <a class="blog__link" href={post.url}>
+              {post.frontmatter.title}
+            </a>
+          </mark>
           <p class="blog__description">{post.frontmatter.description}</p>
           <ul class="blog__tags">
             {post.frontmatter.tags.map((tag: string) => (

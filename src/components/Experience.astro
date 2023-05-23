@@ -11,10 +11,12 @@ const { work } = Astro.props;
 <div class="work__row">
   <div class="work__information">
     <p class="work__position">
-      {work.positions} · <a
-        class="work__url"
-        href={work.company_url}
-        class="work__company">{work.company}</a
+      <mark
+        >{work.positions} · <a
+          class="work__url"
+          href={work.company_url}
+          class="work__company">{work.company}</a
+        ></mark
       >
     </p>
     <p class="work__date">{work.start_date} - {work.end_date}</p>
@@ -43,6 +45,12 @@ const { work } = Astro.props;
   .work__position {
     line-height: 2em;
     font-size: 0.9em;
+  }
+
+  .work__position:first-of-type {
+    line-height: 2em;
+    font-size: 0.9em;
+    margin: 0;
   }
 
   .work__date {
