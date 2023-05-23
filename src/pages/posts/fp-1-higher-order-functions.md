@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Functional Progrmaming Part 1 - Higher-Order Functions
+title: Functional Programming Part 1 - Higher-Order Functions
 pubDate: 2022-11-27
 description: What are higher order functions?
 author: Lean Junio
