@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<Layout title="Blog">
+  <Navigation />
+  <main>
+    {posts.map((post) => <a href={post.url}>{post.frontmatter.title}</a>)}
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    min-width: 100%;
+    max-width: 60ch;
+  }
+
+  main > p {
+    margin-bottom: 2em;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.2rem;
+  }
+</style>
