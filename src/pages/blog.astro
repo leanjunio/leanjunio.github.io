@@ -24,11 +24,6 @@ const sorted = posts.sort(
             </a>
           </mark>
           <p class="blog__description">{post.frontmatter.description}</p>
-          <ul class="blog__tags">
-            {post.frontmatter.tags.map((tag: string) => (
-              <li class="blog__tag">{tag}</li>
-            ))}
-          </ul>
         </div>
       ))
     }
@@ -38,20 +33,19 @@ const sorted = posts.sort(
 
 <style>
   main {
-    gap: 0.5em;
+    gap: 1.5em;
   }
 
   main > p {
     margin-bottom: 2em;
     font-weight: 400;
-    font-size: 0.9em;
     line-height: 1.2rem;
   }
 
   .blog__link {
     color: black;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.25rem;
     text-decoration: none;
     transition: color 0.1s;
   }
@@ -61,19 +55,19 @@ const sorted = posts.sort(
   }
 
   .blog__description {
-    margin-top: 0.2em;
-    font-size: 0.825em;
+    margin: 0.2em 0;
   }
 
   .blog__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
-    font-size: 0.78em;
+    font-size: 0.875rem;
     color: #3f3f3f;
-    list-style-type: " / ";
+    list-style-type: "/ ";
     list-style-position: inside;
     padding: 0;
+    margin: 0.5em 0;
   }
 
   .blog__tag:first-of-type {
